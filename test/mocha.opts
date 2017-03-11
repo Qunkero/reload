@@ -1,3 +1,1 @@
- --reporter spec
- --colors
- --timeout 100000
+ --compilers js:babel-core/register

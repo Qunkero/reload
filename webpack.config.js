@@ -1,13 +1,11 @@
-let webpack = require('webpack');
-
 module.exports = {
     context: __dirname + '/frontend',
     entry:   {
-        library: ['./library']
+        index: ['./app']
     },
     output:  {
-        path:       __dirname + '/public',
-        publicPath: '/',
+        path:       __dirname + '/public/script',
+        publicPath: '/script',
         filename:   '[name].js'
     },
 

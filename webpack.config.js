@@ -12,25 +12,14 @@ module.exports = {
     },
 
     module: {
-
         loaders: [{
-            test:   /\.js$/,
-            include: __dirname + '/frontend',
-            loader: "babel",
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
             query: {
-                presets: ['es2015']
+                presets: ['es2015','react']
             }
-        }, {
-            test:   /\.jade$/,
-            loader: "jade"
-        }, {
-            test:   /\.styl$/,
-            loader: 'style!css!stylus?resolve url'
-        }, {
-            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: 'file?name=[name].[ext]?[hash]'
         }]
-
     },
     devServer: {
         // hot:true,

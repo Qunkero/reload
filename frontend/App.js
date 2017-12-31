@@ -1,12 +1,14 @@
 import React from 'react';
-import stateCounter from './ducks/couter'
+import counterStores from './store/couter'
 import Counter from './components/Counter';
 
 
 class App extends React.Component {
     render() {
         return (
-            <Counter counterState={stateCounter} />
+          <div>
+              <Counter counterState={counterStores} />
+          </div>
         )
     }
 }
